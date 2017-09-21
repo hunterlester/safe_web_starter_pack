@@ -1,0 +1,117 @@
+/* Loaded with SAFE style guidelines */
+
+/*Primary Blue: #5592d7 */
+/*Blue shades:*/
+/*+1: #7BAEE6*/
+/*-1: #357AC6 */
+/*-2: #1460B4*/
+
+/*Mint: #4AD8AD*/
+/*Grey: #595959*/
+
+
+@font-face {
+  font-family: 'Roboto-Slab';
+  src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url('../fonts/SourceCodePro/SourceCodePro-Regular.ttf') format('truetype');
+}
+
+body {
+  background-color: #ffffff;
+  color: #303030;
+  font-family: 'Roboto-Light';
+  font-size: 22px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto-Slab'
+}
+
+a {
+  color: #5592d7;
+  font-family: 'Roboto-Medium';
+}
+
+a:hover {
+  color: #5592d7;
+  font-family: 'Roboto-Medium';
+  cursor: pointer;
+}
+
+.roboto-medium {
+  font-family: 'Roboto-Medium';
+}
+
+.roboto-regular {
+  font-family: 'Roboto-Regular';
+}
+
+.primary-blue-bg {
+  background-color: #5592d7;
+}
+
+.mint {
+  color: #4AD8AD;
+}
+
+.primary-grey {
+  color: #595959;
+}
+
+.primary-blue {
+  color: #5592d7;
+}
+
+.blue-p1-bg {
+  background-color: #7BAEE6;
+}
+
+.blue-m1-bg {
+  background-color: #357AC6;
+}
+
+.blue-m2-bg {
+  background-color: #1460B4;
+}
+
+.primary-grey-bg {
+  background-color: #595959;
+}
+
+.mint-bg {
+  background-color: #4AD8AD;
+}
+
+.white {
+  color: #ffffff;
+}
+
+#network-output {
+  margin-bottom: 20%;
+  background-color: #000000;
+  color: #4AD8AD;
+}
+
+#safe-logo {
+  width: 6%;
+  padding-right: 1%;
+}

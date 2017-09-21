@@ -1,0 +1,35 @@
+{
+  "name": "safe_web_starter_pack",
+  "version": "1.0.0",
+  "description": "SAFE Web starter pack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunterlester/safe_web_starter_pack.git"
+  },
+  "author": "Hunter Lester <hunter.lester@maidsafe.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hunterlester/safe_web_starter_pack/issues"
+  },
+  "homepage": "https://github.com/hunterlester/safe_web_starter_pack#readme",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "browserify": "^14.4.0",
+    "envfile": "^2.1.1",
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^2.9.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
