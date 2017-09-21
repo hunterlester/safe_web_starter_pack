@@ -109,6 +109,7 @@ a:hover {
   margin-bottom: 20%;
   background-color: #000000;
   color: #4AD8AD;
+  overflow-wrap: break-word;
 }
 
 #safe-logo {
