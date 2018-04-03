@@ -1,5 +1,7 @@
 var envfile = require('envfile'),
+  fs = require('fs'),
   gulp = require('gulp'),
+  sass = require('gulp-sass'),
   concat = require('gulp-concat'),
   nodemon = require('gulp-nodemon'),
   watch = require('gulp-watch'),
@@ -7,6 +9,18 @@ var envfile = require('envfile'),
   browserify = require('browserify'),
   source = require('vinyl-source-stream'),
   babelify = require('babelify');
+
+gulp.task('safe-styles', function() {
+  gulp.src([
+      './node_modules/safe_ux_guidelines/scss/**/*.scss',
+      './node_modules/npm-font-open-sans/open-sans.scss',
+      '!./node_modules/safe_ux_guidelines/scss/main.scss'
+   ])
+    .pipe(gulp.dest('./static/scss'));
+
+  gulp.src('./static/scss/custom/main.scss')
+    .pipe(gulp.dest('./static/scss'));
+});
 
 gulp.task('image', function () {
   gulp.src('./static/images/*')
@@ -33,11 +47,12 @@ gulp.task('html', function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('css', function () {
+gulp.task('scss', function () {
   gulp.src([
-      './static/css/styles.css',
-    ])
-    .pipe(gulp.dest('./build/css'));
+      './static/scss/main.scss',
+  ])
+   .pipe(sass().on('error', sass.logError))
+   .pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('css-deps', function () {
@@ -51,7 +66,7 @@ gulp.task('css-deps', function () {
 gulp.task('fonts', function () {
   gulp.src([
       './node_modules/bootstrap/fonts/*.*',
-      './static/fonts/**/*.*'
+      './node_modules/npm-font-open-sans/fonts/**/*.*'
     ])
     .pipe(gulp.dest('./build/fonts'));
 });
@@ -78,7 +93,7 @@ gulp.task('serve', function () {
   nodemon({
     script: './index.js',
     ext: 'html js',
-    ignore: ['build/**/*.*', 'static/**/*.*'],
+    ignore: ['build/**/*.*', 'static/**/*.*', 'node_modules'],
     tasks: [],
     env: env
   }).on('restart', function () {
@@ -100,4 +115,4 @@ gulp.task('watch', function () {
   });
 });
 
-gulp.task('default', ['js-deps', 'html', 'css', 'css-deps', 'js', 'watch', 'serve', 'fonts', 'image']);
+gulp.task('default', ['js-deps', 'html', 'scss', 'css-deps', 'js', 'watch', 'serve', 'fonts', 'image']);

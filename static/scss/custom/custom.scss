@@ -1,0 +1,20 @@
+a {
+  color: map-get($colors, 'primary-blue');
+}
+
+a:hover {
+  color: map-get($colors, 'blue-100');
+  cursor: pointer;
+}
+
+#network-output {
+  margin-bottom: 20%;
+  background-color: map-get($colors, 'smoke-dark');
+  color: map-get($colors, 'teal-300');
+  overflow-wrap: break-word;
+}
+
+#safe-logo {
+  width: 6%;
+  padding-right: 1%;
+}

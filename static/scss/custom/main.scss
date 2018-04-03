@@ -1,0 +1,12 @@
+// This file sits here, in /static/scss/custom/, to be copied over to parent directory in gulp task
+// Add new custom scss files to the end of this file, making sure that the path contains "custom" directory
+$FontPathOpenSans: "../fonts";
+
+@import 'open-sans';
+@import 'support/index';
+@import 'typography';
+@import 'colors';
+@import 'icons';
+@import 'base';
+@import 'custom/custom';
+// example @import 'custom/feature_style.scss';
