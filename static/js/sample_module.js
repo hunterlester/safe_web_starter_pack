@@ -15,7 +15,7 @@
   pEl.textContent = 'Interfacing with network...';
   divEl.appendChild(pEl);
 
-  const appHandle = await window.safeApp.initialise(appInfo);
+  window.appHandle = await window.safeApp.initialise(appInfo);
   console.log('App handle: ', appHandle);
 
   const pE2 = document.createElement('p');
